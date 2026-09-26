@@ -58,6 +58,7 @@ def main():
     prolog.assertz("mujer(andrea)")
     prolog.assertz("hombre(andres)")
     prolog.assertz("progenitor(andres,andrea)")
+    prolog.assertz("progenitor(diego,pedro)")
     nietos_maria = [r["N"] for r in prolog.query("abuelo(maria, N)")]
     print(f"Nietos de maria (tras agregar a diego): {nietos_maria}")
 
